@@ -1,0 +1,53 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+        "importHelpers": true,
+        "allowJs": false,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+
+        /* Bundler mode */
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true,
+        "isolatedModules": true,
+        "moduleDetection": "force",
+        "noEmit": true,
+        "jsx": "react-jsx",
+
+        /* Linting */
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+
+        /* type definitions */
+        "typeRoots": ["node_modules/@types", "types"],
+
+        /* Path Alias */
+        "baseUrl": "./",
+        "paths": {
+            /**
+             * alias의 설정은 각 디렉토리 별로 2개씩 설정
+             * 각 디렉토리 직접 import 시, 예) import { xxxx } from '@assets'
+             * 각 디렉토리 하위 파일 import 시, 예) import { xxxx } from '@assets/xxxx'
+             */
+            "@layouts": ["src/layouts"],
+            "@layouts/*": ["src/layouts/*"],
+            "@pages": ["src/pages"],
+            "@pages/*": ["src/pages/*"],
+            "@routes": ["src/routes"],
+            "@routes/*": ["src/routes/*"],
+            "@shared": ["src/shared"],
+            "@shared/*": ["src/shared/*"],
+            "@assets": ["src/assets"],
+            "@assets/*": ["src/assets/*"],
+            "@app": ["src/app"],
+            "@app/*": ["src/app/*"]
+        }
+    },
+    "include": ["src/**/*"]
+}

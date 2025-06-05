@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    @apply size-full;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#root {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* 기본 font pretendard */
+body {
+    @apply font-pretendard;
+    line-height: 1.5;
+}
+
+/* 기본 브라우저의 스크롤 바 사이즈 및 스타일 변경 */
+*::-webkit-scrollbar {
+    width: 0.25rem;
+    height: 0.25rem;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #dcdcdc;
+    border-radius: 0.25rem;
+}
+
+*::-webkit-scrollbar-track {
+    display: transparent;
+}
+
+/** react-datepicker custom style */
+.react-datepicker-wrapper {
+    width: 100%;
+}
+
+/** react toastify custom style */
+.custom-toast-container,
+.root-toast-container {
+    /* 기본 스타일 재정의 */
+    background: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.root-toast {
+    /* 토스트 컨테이너 스타일 */
+    background: none !important;
+    padding: 0 !important;
+}
+
+/* 마크다운 미리보기 */
+.markdown-preview {
+    /* 기본 텍스트 스타일 */
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+
+    /* 제목 스타일 */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+        font-weight: 600;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    h3 {
+        font-size: 1.25em;
+    }
+
+    /* 단락 스타일 */
+    p {
+        margin: 1em 0;
+    }
+
+    /* 인용문 스타일 */
+    blockquote {
+        padding: 0.5em 1em;
+        margin: 1em 0;
+        border-left: 4px solid #ddd;
+        background-color: #f9f9f9;
+    }
+
+    /* 코드 블록 스타일 */
+    pre {
+        background-color: #f6f8fa;
+        padding: 1em;
+        border-radius: 4px;
+        overflow-x: auto;
+    }
+    code {
+        background-color: #f6f8fa;
+        padding: 0.2em 0.4em;
+        border-radius: 3px;
+        font-family: monospace;
+    }
+
+    /* 테이블 스타일 */
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 1em 0;
+    }
+    th,
+    td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f6f8fa;
+    }
+
+    /* 링크 스타일 */
+    a {
+        color: #0366d6;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* 수평선 스타일 */
+    hr {
+        border: 0;
+        border-top: 1px solid #ddd;
+        margin: 2em 0;
+    }
+
+    /* 이미지 스타일 */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* 리스트 스타일 */
+    ul {
+        list-style-type: disc;
+        padding-left: 2em;
+        margin: 1em 0;
+    }
+
+    ol {
+        list-style-type: decimal;
+        padding-left: 2em;
+        margin: 1em 0;
+    }
+
+    li {
+        margin: 0.5em 0;
+    }
+}
+
+/** react-loading-skeleton custom style */
+@media (prefers-reduced-motion) {
+    .react-loading-skeleton {
+        --pseudo-element-display: block !important;
+    }
+}
